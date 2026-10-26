@@ -1,0 +1,209 @@
+/* ---------- BASE (mobile, under 576px) ---------- */
+* {
+  box-sizing: border-box;
+}
+ 
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.6;
+  color: #222;
+  background: #f5f0e6;
+}
+ 
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+ 
+/* Header */
+header {
+  background-color: #1d5c2a;
+  color: #fff;
+  text-align: center;
+}
+ 
+.bigscreen {
+  background-color: beige;
+  color: #222;
+}
+ 
+.bigscreen h1 {
+  margin: 0;
+  padding: 1rem 0;
+  font-size: 2rem;
+}
+ 
+/* Hidden on small screens, shown at 576px */
+.headerfluff {
+  display: none;
+  margin: 0;
+}
+ 
+/* Navigation: stacked full-width links */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #1d5c2a;
+}
+ 
+nav li {
+  display: block;
+}
+ 
+nav a {
+  display: block;
+  padding: 0.75rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-top: 1px solid #5a9462;
+}
+ 
+nav a:hover {
+  background: #e8c547;
+  color: #222;
+}
+ 
+/* Stories */
+main {
+  padding: 0 1rem;
+}
+ 
+section {
+  background-color: white;
+  margin: 1rem 0;
+  padding: 1rem;
+  text-align: center;
+}
+ 
+img {
+  display: block;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+ 
+/* Aside */
+aside {
+  text-align: center;
+  background-color: white;
+  border: #1d5c2a ridge 15px;
+  padding: 10px;
+  margin: 1rem;
+}
+ 
+button:hover {
+  color: gold;
+}
+ 
+/* Footer */
+footer {
+  clear: both;
+  background-color: #1d5c2a;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+ 
+ 
+/* ---------- 576px and up (large phones / small tablets) ---------- */
+@media (min-width: 576px) {
+ 
+  /* 1. Header tagline lines appear */
+  .headerfluff {
+    display: block;
+  }
+ 
+  /* 2. Nav goes from stacked rows to one horizontal row */
+  nav li {
+    display: inline-block;
+  }
+ 
+  nav a {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-top: none;
+  }
+ 
+  /* 3. Aside is hidden */
+  aside {
+    display: none;
+  }
+ 
+  /* 4. Images shrink and center */
+  img {
+    width: 250px;
+    margin: 0 auto 1rem;
+  }
+}
+ 
+ 
+/* ---------- 720px and up (tablets) ---------- */
+@media (min-width: 720px) {
+ 
+  /* 1. Main column and aside sit side by side */
+  main {
+    float: left;
+    width: 68%;
+  }
+ 
+  aside {
+    display: block;
+    float: right;
+    width: 28%;
+    margin: 1rem 2% 1rem 0;
+  }
+ 
+  /* 2. Nav links become equal-width tabs */
+  nav li {
+    display: block;
+    float: left;
+    width: 33.333%;
+  }
+ 
+  nav a {
+    display: block;
+    text-align: center;
+    border-left: 1px solid #5a9462;
+  }
+ 
+  /* 3. Bigger site title */
+  .bigscreen h1 {
+    font-size: 3rem;
+  }
+}
+ 
+ 
+/* ---------- 992px and up (desktops) ---------- */
+@media (min-width: 992px) {
+ 
+  /* 1. Three stories sit side by side as columns */
+  section {
+    float: left;
+    width: 31.333%;
+    margin: 1rem 1%;
+  }
+ 
+  /* 2. Images fill each column */
+  img {
+    width: 100%;
+    height: 180px;
+  }
+ 
+  /* 3. Main widens, aside narrows */
+  main {
+    width: 75%;
+  }
+ 
+  aside {
+    width: 22%;
+  }
+ 
+  /* 4. Biggest site title */
+  .bigscreen h1 {
+    font-size: 4rem;
+  }
+}
